@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="de4c64898958436dabc9b213e5a04536" Name="Diagram1">
+        <EntityTypeShape EntityType="Wallet_VirtualModel.CajaCryptoMoneda" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Wallet_VirtualModel.CajaMonedaExtranjera" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="Wallet_VirtualModel.CajaMonedaLocal" Width="1.5" PointX="5.25" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Wallet_VirtualModel.CVU" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Wallet_VirtualModel.Factura" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Wallet_VirtualModel.Inversiones" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Wallet_VirtualModel.Operaciones" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Wallet_VirtualModel.Servicios" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Wallet_VirtualModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Wallet_VirtualModel.Usuario" Width="1.5" PointX="5.25" PointY="13.5" IsExpanded="true" />
+        <AssociationConnector Association="Wallet_VirtualModel.FK_CVU_CajaCryptoMoneda" ManuallyRouted="false" />
+        <AssociationConnector Association="Wallet_VirtualModel.FK_CVU_CajaMonedaExtranjera" ManuallyRouted="false" />
+        <AssociationConnector Association="Wallet_VirtualModel.FK_CVU_CajaMonedaLocal" ManuallyRouted="false" />
+        <AssociationConnector Association="Wallet_VirtualModel.FK_CVU_Operaciones" ManuallyRouted="false" />
+        <AssociationConnector Association="Wallet_VirtualModel.FK_CVU_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="Wallet_VirtualModel.FK_Servicios_Factura1" ManuallyRouted="false" />
+        <AssociationConnector Association="Wallet_VirtualModel.FK_Operaciones_Inversiones" ManuallyRouted="false" />
+        <AssociationConnector Association="Wallet_VirtualModel.FK_Operaciones_Servicios" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
