@@ -15,18 +15,13 @@ namespace Clip_Banco.Controllers
         {
             using (var context = new Wallet_VirtualEntities())
             {
+                AUsuario a = new AUsuario();
                 var clientUsuario = new SqlParameter("@usuario", usuario);
                 var clientContrasena = new SqlParameter("@contrasena", contrasena);
                 
-                /*
                 var result = context.Database
-                    .SqlQuery<AUsuario>("usp_ValidaAcceso @usuario, @contrasena", usuario, contrasena)
+                    .SqlQuery<AUsuario>("usp_ValidaAcceso @usuario, @contrasena", clientUsuario, clientContrasena)
                     .ToList();
-                */
-
-                var result = context.Database.SqlQuery<AUsuario>(
-                    "exec usp_ValidaAcceso @usuario",
-                    new SqlParameter("usuario", usuario)).ToList<AUsuario>();
 
                 return result.AsQueryable();
             }
