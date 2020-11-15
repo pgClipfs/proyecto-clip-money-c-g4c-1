@@ -30,7 +30,7 @@ namespace Clip_Banco.Controllers
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 DbParameter param = cmd.CreateParameter();
-                param.ParameterName = "@idUsuario";
+                param.ParameterName = "@usuario";
                 param.DbType = DbType.Int32;
                 param.Direction = ParameterDirection.Input;
                 param.Value = idUsuario;
@@ -47,7 +47,7 @@ namespace Clip_Banco.Controllers
                     // Read Blogs from the first result set
                     var vUsuario = ((IObjectContextAdapter)db)
                         .ObjectContext
-                        .Translate<Usuarioperfil>(reader, "perfil", MergeOption.AppendOnly);
+                        .Translate<Usuarioperfil>(reader, "Accesousuario", MergeOption.AppendOnly);
 
 
                     foreach (var item in vUsuario)
