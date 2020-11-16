@@ -24,7 +24,7 @@ namespace Clip_Banco.Models
         public Nullable<int> DNI { get; set; }
         public string nombre { get; set; }
         public string apellido { get; set; }
-        public string contraseña { get; set; }
+        public string contrasena { get; set; }
         public string correoElectronico { get; set; }
         public Nullable<int> telefono { get; set; }
         public Nullable<System.DateTime> fechaRegistro { get; set; }

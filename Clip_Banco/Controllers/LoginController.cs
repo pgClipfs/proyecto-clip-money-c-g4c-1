@@ -11,16 +11,16 @@ namespace Clip_Banco.Controllers
 {
     public class LoginController : ApiController
     {
-        public IQueryable<AUsuario> GetAutehnticate(string usuario, string contrasena)
+        public IQueryable<AUsuario> GetAutehnticate(string idUsuario, string contrasena)
         {
             using (var context = new Wallet_VirtualEntities())
             {
                 AUsuario a = new AUsuario();
-                var clientUsuario = new SqlParameter("@usuario", usuario);
+                var clientUsuario = new SqlParameter("@usuario", idUsuario);
                 var clientContrasena = new SqlParameter("@contrasena", contrasena);
                 
                 var result = context.Database
-                    .SqlQuery<AUsuario>("usp_ValidaAcceso @usuario, @contrasena", clientUsuario, clientContrasena)
+                    .SqlQuery<AUsuario>("usp_ValidaAcceso @usuario, @contrasena", clientUsuario, clientContrasena).DefaultIfEmpty(a)
                     .ToList();
 
                 return result.AsQueryable();

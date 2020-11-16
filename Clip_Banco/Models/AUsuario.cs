@@ -11,7 +11,7 @@ namespace Clip_Banco.Models
         public int DNI { get; set; }
         public string nombre { get; set; }
         public string apellido { get; set; }
-        public string contraseña { get; set; }
+        public string contrasena { get; set; }
         public string correoElectronico { get; set; }
         public int telefono { get; set; }
     }

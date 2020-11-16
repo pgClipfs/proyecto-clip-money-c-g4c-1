@@ -107,7 +107,7 @@
     <Property Name="DNI" Type="Int32" />
     <Property Name="nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="apellido" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="contraseña" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="contrasena" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
     <Property Name="correoElectronico" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="telefono" Type="Int32" />
     <Property Name="fechaRegistro" Type="DateTime" Precision="0" />
@@ -210,7 +210,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="Wallet_VirtualEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="Wallet_VirtualEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="CajaCryptoMoneda" EntityType="Self.CajaCryptoMoneda" />
     <EntitySet Name="CajaMonedaExtranjera" EntityType="Self.CajaMonedaExtranjera" />
     <EntitySet Name="CajaMonedaLocal" EntityType="Self.CajaMonedaLocal" />

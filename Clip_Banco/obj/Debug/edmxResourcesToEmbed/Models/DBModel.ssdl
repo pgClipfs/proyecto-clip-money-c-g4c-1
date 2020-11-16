@@ -92,7 +92,7 @@
     <Property Name="DNI" Type="int" />
     <Property Name="nombre" Type="varchar" MaxLength="20" />
     <Property Name="apellido" Type="varchar" MaxLength="20" />
-    <Property Name="contraseña" Type="varchar" MaxLength="8" />
+    <Property Name="contrasena" Type="varchar" MaxLength="8" />
     <Property Name="correoElectronico" Type="varchar" MaxLength="50" />
     <Property Name="telefono" Type="int" />
     <Property Name="fechaRegistro" Type="date" />
