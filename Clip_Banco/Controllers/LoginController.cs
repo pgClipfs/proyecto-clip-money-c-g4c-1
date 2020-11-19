@@ -1,29 +1,50 @@
-﻿using Clip_Banco.Models;
+﻿using Clip_banco.Models;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading;
 using System.Web.Http;
 
-namespace Clip_Banco.Controllers
+namespace Clip_banco.Controllers
 {
+    [AllowAnonymous]
+    [RoutePrefix("api/Login")]
     public class LoginController : ApiController
     {
-        public IQueryable<AUsuario> GetAutehnticate(string idUsuario, string contrasena)
+        [HttpGet]
+        [Route("echoping")]
+        public IHttpActionResult EchoPing()
         {
-            using (var context = new Wallet_VirtualEntities())
-            {
-                AUsuario a = new AUsuario();
-                var clientUsuario = new SqlParameter("@usuario", idUsuario);
-                var clientContrasena = new SqlParameter("@contrasena", contrasena);
-                
-                var result = context.Database
-                    .SqlQuery<AUsuario>("usp_ValidaAcceso @usuario, @contrasena", clientUsuario, clientContrasena).DefaultIfEmpty(a)
-                    .ToList();
+            return Ok(true);
+        }
+        [HttpGet]
+        [Route("echouser")]
+        public IHttpActionResult EchoUser()
+        {
+            var identity = Thread.CurrentPrincipal.Identity;
+            return Ok($" IPrincipal-user: {identity.Name} - IsAuthenticated: {identity.IsAuthenticated}");
+        }
+        [HttpGet]
+        [Route("authenticate")]
+        public IHttpActionResult Authenticate(LoginRequest login)
+        {
+            if (login == null)
+                throw new HttpRequestException(HttpStatusCode.BadRequest.ToString());
 
-                return result.AsQueryable();
+            GestorLogin gLogin = new GestorLogin();
+
+            bool isCredentialValid = gLogin.ValidarLogin(login);
+
+            if (isCredentialValid)
+            {
+                var token = TokenGenerator.GenerateTokenJwt(login.Username);
+                return Ok(token);
+            }
+            else
+            {
+                return Unauthorized();
             }
         }
     }

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Clip_Banco
+namespace Clip_banco
 {
     public class RouteConfig
     {

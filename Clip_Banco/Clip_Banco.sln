@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clip_Banco", "Clip_Banco.csproj", "{289646E2-45BA-41AC-8BFF-9B0F86D5F3AD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clip_banco", "Clip_banco.csproj", "{1EC15649-7A0B-4FD1-9497-2A8E44F7EA16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{289646E2-45BA-41AC-8BFF-9B0F86D5F3AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{289646E2-45BA-41AC-8BFF-9B0F86D5F3AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{289646E2-45BA-41AC-8BFF-9B0F86D5F3AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{289646E2-45BA-41AC-8BFF-9B0F86D5F3AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EC15649-7A0B-4FD1-9497-2A8E44F7EA16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EC15649-7A0B-4FD1-9497-2A8E44F7EA16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EC15649-7A0B-4FD1-9497-2A8E44F7EA16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EC15649-7A0B-4FD1-9497-2A8E44F7EA16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {CFC1F748-BD17-4CA1-B584-16F206FAAB66}
+		SolutionGuid = {2DD035F7-0D79-4BF1-AB66-F50D452D200C}
 	EndGlobalSection
 EndGlobal
