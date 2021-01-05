@@ -10,7 +10,7 @@ namespace Clip_banco.Models
     {
         public bool ValidarLogin(LoginRequest ploginRequest)
         {
-            string strConn = "Server=DESKTOP-TC83RVK\\SQLEXPRESS; Database=Wallet_Virtual; Trusted_Connection=True;";
+            string strConn = "Server=DESKTOP-U1Q7F01\\SQLEXPRESS; Database=Wallet_Virtual; Trusted_Connection=True;";
             bool result = false;
 
             using (SqlConnection conn = new SqlConnection(strConn))

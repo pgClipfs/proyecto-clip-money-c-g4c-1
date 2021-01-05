@@ -12,11 +12,24 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { LoginComponent } from './components/sesion/login/login.component';
 import { RegisterComponent } from './components/sesion/register/register.component';
 import { RecuperarPssComponent } from './components/sesion/recuperar-pss/recuperar-pss.component';
+import { DashboardComponent } from './components/Dashboard/Dashboard.component';
+import { HomeComponent } from './components/home/home.component';
+import { GuardService } from './services/guard.service';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { IndexOperacionesComponent } from './components/operaciones/index-operaciones/index-operaciones.component';
 
 const appRoutes: Routes=[
+  {path: 'home', component: HomeComponent,canActivate:[GuardService],
+  children: [
+   {path: '', component: InicioComponent},
+   {path: 'inicio', component: InicioComponent},
+   {path: 'operaciones',component:IndexOperacionesComponent}
+ ]},
   {path: 'login', component:LoginComponent},
   {path: 'register', component:RegisterComponent},
-  {path: 'recuperacionPss', component:RecuperarPssComponent}
+  {path: 'recuperacionPss', component:RecuperarPssComponent},
+  {path: 'Dashboard', component:DashboardComponent},
+
 ]
 
 @NgModule({
@@ -25,7 +38,9 @@ const appRoutes: Routes=[
     NavbarComponent,
     LoginComponent,
     RegisterComponent,
-    RecuperarPssComponent
+    RecuperarPssComponent,
+    DashboardComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
