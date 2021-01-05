@@ -1,0 +1,61 @@
+#logo{
+    margin-top: 0px;
+    text-align: right;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: right;
+    align-items: center;
+
+  }
+
+  #logo img{
+      width: 10rem;
+      max-width: 15rem;
+      margin-top: 0px;
+
+  }
+  *{
+    box-sizing: border-box;
+
+  }
+  body{
+      margin: 0;
+      padding: 0;
+  }
+  .navbar{
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      background-color: lightblue;
+      color: indigo;
+
+    }
+
+    .brand-title{
+        font-size: 1.5rem;
+        margin: .5rem;
+    }
+
+    .navbar-links ul{
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .navbar-links li{
+        list-style: none;
+    }
+
+    .navbar-links li a{
+        text-decoration: none;
+        color: indigo;
+        padding: 1rem;
+        display: block;
+    }
+
+  .navbar-links li:hover{
+      background-color: lightblue;
+
+  }

@@ -89,3 +89,6 @@ input:focus{
    input::after{
     border-bottom-color: #FF6600 !important;
    }
+   body{
+    background-color: dimgray;
+ }

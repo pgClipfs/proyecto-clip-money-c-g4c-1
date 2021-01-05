@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class = "container-fluid general-fotos">
-            <form (ngSubmit)="onSubmit()" [formGroup] = "form">
+            <form (ngSubmit)="onSubmit()">
                 <div class="row">
 
                     <div class=" col-12 col-sm-12 col-md-12 dni-mensaje">
@@ -34,7 +34,7 @@
                             </div>
                             <div class ="col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class ="contenedor-btnDorso">
-                                    <input type="file" class="file" id="fileselfie" (change)= onSelectFile($event,0) formControlName = "inputSelfie" [(ngModel)]="valorInputSelfie" >   
+                                    <input type="file" class="file" id="fileselfie" (change)= onSelectFile($event,0) formControlName = "inputSelfie" >   
                                     <label for="fileselfie" class="labelDni">Subir Archivo</label>
                                     
                                 </div>
@@ -52,7 +52,7 @@
                             </div>
                             <div class ="col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class ="contenedor-btnDorso">
-                                    <input type="file" class="file" id="filefrente" (change)= onSelectFile($event,1) formControlName = "inputfrenteDni"  [(ngModel)]="valorInputFrente">   
+                                    <input type="file" class="file" id="filefrente" (change)= onSelectFile($event,1) formControlName = "inputfrenteDni" >   
                                     <label for="filefrente" class="labelDni">Subir Archivo</label>
                                     
                                 </div>
@@ -69,7 +69,7 @@
                             </div>
                             <div class ="col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class ="contenedor-btnDorso">
-                                    <input type="file" class="file" id="filedorso" (change)= onSelectFile($event,2) formControlName = "inputdorsoDni" [(ngModel)]="valorInputDorso">   
+                                    <input type="file" class="file" id="filedorso" (change)= onSelectFile($event,2) formControlName = "inputdorsoDni">   
                                     <label for="filedorso" class="labelDni">Subir Archivo</label>
                                     
                                 </div>

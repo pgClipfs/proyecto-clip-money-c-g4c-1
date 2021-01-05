@@ -29,24 +29,10 @@
     width: 100%;
     /*border-bottom: 1px solid rgb(224, 218, 218);*/
 }
-#logo{
-    margin-top: 0px;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
 
-  }
-
-  #logo img{
-      width: 10rem;
-      max-width: 15rem;
-      margin-top: 0px;
-
-  }
+  body{
+    background-color: dimgray;
+ }
 
 #navegacion{
     height: 100%;
@@ -132,8 +118,6 @@ img{
         width: auto;
         height: auto;
     }
-    #logo{
-    }
     #navegacion{
      display: none;
       
@@ -143,9 +127,6 @@ img{
     }
     #nombreUsuario #nombre{ 
         padding-right: 1rem; 
-    }
-    .navvar{
-       /*display: none;*/
     }
 
     #fotoUsuario{
