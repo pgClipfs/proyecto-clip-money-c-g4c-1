@@ -6,6 +6,16 @@
     padding: 0px;
     text-decoration: none;
 }
+.center{
+    float: left;
+    width: 70px;
+    height: 100%;
+    text-align: center;
+    padding-top: 1rem;
+    text-anchor: middle;
+
+    
+}
 .contenedor{
     width: 100%;
     height: auto;
@@ -31,7 +41,10 @@
 }
 
   body{
-    background-color: dimgray;
+    background-color: #5352ed;
+ }
+ header{
+    background-color: #5352ed;
  }
 
 #navegacion{
@@ -59,7 +72,7 @@
   width: auto;
   bottom: 0;
   right: 0;
-  border-bottom: 1px solid #EB5600;
+  border-bottom: 1px solid #3742fa;
 }
 
 #nombreUsuario #nombre p{
@@ -82,7 +95,7 @@
     max-height: 7rem;
     image-rendering:optimizeQuality;
     border-radius: 50%;
-    border: 1px solid  #EB5600;
+    border: 1px solid  #3742fa;
 }
 img{
     position: absolute;
@@ -226,3 +239,42 @@ img{
     }
         
 }
+.contenedor-cuentas{
+    padding-top: 3rem;
+    background-color:#F7F7F7;
+    height: 100%;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;
+    border-bottom: 1px solid #3742fa;
+    border-top: 1px solid #3742fa;
+    border-left: 1px solid #3742fa;
+    border-right: 1px solid #3742fa;
+
+}
+
+.contenedor-link{
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+}
+.contenedor-ca{
+    text-align: center;   
+}
+/*CSS PARTE CUERPO DE LAS CUENTAS*/
+.cuerpo-cuenta1-pesos{
+    width: 50%;
+    height: 40vh;
+    text-align: center;
+}
+.cuerpo-cuenta2-pesos{
+    width: 25%;
+    height: 40vh;
+}
+
+.cuerpo-cuentas-dolares{
+    width: 100%;
+    height: 40vh;
+}
+
+

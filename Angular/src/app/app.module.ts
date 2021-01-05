@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
-//import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -12,7 +11,6 @@ import { LoginComponent } from './components/sesion/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { IndexOperacionesComponent } from './components/operaciones/index-operaciones/index-operaciones.component';
-import { IndexComponent } from './components/index/index.component';
 import { GuardService } from './services/guard.service';
 import { CuentasComponent } from './components/cuentas/cuentas.component';
 import { DetalleCuentaComponent } from './components/cuentas/detalle-cuenta/detalle-cuenta.component';
@@ -23,15 +21,15 @@ import { ObtenerComponent } from './components/cliente/obtener/obtener.component
 import { RecoveryMailComponent } from './components/recoverymail/recoverymail.component';
 import { RecoverypasswordComponent } from './components/recoverypassword/recoverypassword.component';
 import { AppRoutingModule } from './app-routing.module';
+import { RegisterComponent } from './components/sesion/register/register.component';
 
 
 
 
 const routes: Routes =
 [
-  {path: '', component: IndexComponent},
-  {path: 'index', component: IndexComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent},
   {path: 'home', component: HomeComponent},
   {path: 'inicio', component: InicioComponent},
   {path: 'operaciones',component:IndexOperacionesComponent},
@@ -43,7 +41,6 @@ const routes: Routes =
   {path: 'obtener', component: ObtenerComponent, canActivate:[GuardService]},
   {path: 'recoverymail', component: RecoveryMailComponent},
   {path: 'recoverypassword', component: RecoverypasswordComponent},
-  {path: '**', component: IndexComponent},
 ];
 
 @NgModule({
@@ -52,7 +49,6 @@ const routes: Routes =
     ClienteComponent,
     HomeComponent,
     NavbarComponent,
-    IndexComponent,
     InicioComponent,
     LoginComponent,
     RecoveryMailComponent,

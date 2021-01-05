@@ -1,7 +1,8 @@
+
 *{
     margin: 0;
+    
 }
-
 /*CSS PARTE CABEZERA*/
 .titulo-cuentas{
     width: 100%;
@@ -26,7 +27,7 @@
     padding-top: 4vh;
 }
 .boton-nuevacuenta{
-    background-color: #FF6600 !important;
+    background-color: #3742fa !important;
     border-style: none;
 }
 
@@ -70,8 +71,8 @@
 }
 
 .icono-cuenta{
-    background-color: #FF6600;
-    color: white;
+    background-color: #3742fa;
+    color: #5e63c2;
     height: 14vh;
     width: 14vh;
     border-radius: 5px;

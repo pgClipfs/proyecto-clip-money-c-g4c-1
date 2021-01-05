@@ -4,7 +4,7 @@ h2{
 }
 
 .texto-seleccion{
-    background-color: #FF6600;
+    background-color: #5352ed;
     color: white;
 }
 
@@ -24,24 +24,24 @@ h2{
     padding: 0 !important;
     border-radius: none !important;
     /*border-radius: 10px 10px 10px 10px;*/
-    border-bottom: 1px solid #EB5600 !important;
-    border-top: 1px solid #EB5600 !important ;
-    border-left: 1px solid #EB5600 !important ;
-    border-right: 1px solid #EB5600 !important ;
-    color: #FF6600 !important;
+    border-bottom: 1px solid #5352ed !important;
+    border-top: 1px solid #5352ed !important ;
+    border-left: 1px solid #5352ed !important ;
+    border-right: 1px solid #5352ed !important ;
+    color: #5352ed !important;
     font-size: 1.5rem !important;
 }
 .btn-ope:hover{
-    background-color: #FF6600 !important;
-    border-bottom: 1px solid white !important ;
-    border-top: 1px solid white !important ;
-    border-left: 1px solid white !important ;
-    border-right: 1px solid white !important ;
-    color: white !important;
+    background-color: #5352ed !important;
+    border-bottom: 1px solid #5352ed !important ;
+    border-top: 1px solid #5352ed !important ;
+    border-left: 1px solid #5352ed !important ;
+    border-right: 1px solid #5352ed !important ;
+    color: #5352ed !important;
 }
 
 .btn-ope:active{
-    background-color: #FF6600 !important;
+    background-color: #5352ed !important;
     border-bottom: 1px solid white !important ;
     border-top: 1px solid white !important ;
     border-left: 1px solid white !important ;
@@ -50,17 +50,17 @@ h2{
 }
 
 .texto-ingreso{
-    background-color: #FF6600;
+    background-color: #5352ed;
     color: white;
 }
 
 .texto-retiro{
-    background-color: #FF6600;
+    background-color: #5352ed;
     color: white;
 }
 
 label{
-    color: #8B8E95;
+    color: #5352ed;
 }
 
 select{
@@ -72,7 +72,7 @@ select{
     font-size: 2.6vh;
 }
 select:focus{
- border-bottom-color: #FF6600 !important;
+ border-bottom-color: #5352ed !important;
 }
 input{
     color:rgb(32, 31, 31);
@@ -84,11 +84,11 @@ input{
     font-weight: 500;
 }
 input:focus{
-    border-bottom-color: #FF6600 !important;
+    border-bottom-color: #5352ed !important;
    }
    input::after{
-    border-bottom-color: #FF6600 !important;
+    border-bottom-color: #5352ed !important;
    }
-   body{
-    background-color: dimgray;
+body{
+    background-color: #5e63c2;
  }

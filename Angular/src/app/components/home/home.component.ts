@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import jwtDecode from 'jwt-decode';
-import { StringifyOptions } from 'querystring';
-import { Observable } from 'rxjs';
 import { Cliente } from 'src/app/models/cliente.model';
 import { ClienteService } from 'src/app/services/cliente.service';
 import { TokenStorageService } from 'src/app/services/token-storage.service';
@@ -48,3 +45,4 @@ export class HomeComponent implements OnInit {
   }
 
 }
+

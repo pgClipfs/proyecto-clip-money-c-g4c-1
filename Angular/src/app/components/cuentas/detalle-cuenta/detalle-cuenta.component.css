@@ -22,7 +22,7 @@
     padding-top: 1rem;
 }
 .inicio-a{
-    color:#FF6600 ;
+    color:#3742fa ;
     cursor: pointer;
 }
 
@@ -34,7 +34,7 @@
     padding-top: 1rem;
 }
 .cuentas-a{
-    color:#FF6600 ;
+    color:#3742fa ;
     cursor: pointer;
 }
 .nrocuenta{
@@ -65,12 +65,12 @@
 .btn-movimientos{
     background-color: white !important;
     border-radius: 0 !important;
-    color: #FF6600;
-    border: 1px solid #FF6600;
+    color: #3742fa;
+    border: 1px solid #3742fa;
     box-shadow: none;
 }
 .btn-movimientos:hover{
-    background-color: #FF6600 !important;
+    background-color: #3742fa !important;
     border-radius: 0 !important;
     color: white;
     border: 1px solid white;
@@ -85,12 +85,12 @@
 .btn-resumen{
     background-color: white !important;
     border-radius: 0 !important;
-    color: #FF6600;
-    border: 1px solid #FF6600;
+    color: #3742fa;
+    border: 1px solid #3742fa;
     box-shadow: none;
 }
 .btn-resumen:hover{
-    background-color: #FF6600 !important;
+    background-color: #3742fa !important;
     border-radius: 0 !important;
     color: white;
     border: 1px solid white;
@@ -103,12 +103,12 @@
 .btn-masopciones{
     background-color: white !important;
     border-radius: 0 !important;
-    color: #FF6600;
-    border: 1px solid #FF6600;
+    color: #3742fa;
+    border: 1px solid #3742fa;
     box-shadow: none;
 }
 .btn-masopciones:hover{
-    background-color: #FF6600 !important;
+    background-color: #3742fa !important;
     border-radius: 0 !important;
     color: white;
     border: 1px solid white;
@@ -120,7 +120,7 @@
     padding-top: 0.7vh;
     width: 100%;
     height: 7vh;
-    background-color: #FF6600;
+    background-color: #3742fa;
     border-radius: 5px 5px 0px 0px;
 }
 .titulo-cuenta p{

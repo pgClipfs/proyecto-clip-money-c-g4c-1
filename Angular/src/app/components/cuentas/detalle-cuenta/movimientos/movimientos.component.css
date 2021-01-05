@@ -28,7 +28,7 @@
     padding-top: 1rem;
 }
 .inicio-a{
-    color:#FF6600 ;
+    color:#3742fa ;
     cursor: pointer;
 }
 
@@ -40,7 +40,7 @@
     padding-top: 1rem;
 }
 .cuentas-a{
-    color:#FF6600 ;
+    color:#3742fa ;
     cursor: pointer;
 }
 .nrocuenta{
@@ -51,7 +51,7 @@
     padding-left: 5px;
 }
 .nrocuenta-a{
-    color:#FF6600 ;
+    color:#3742fa ;
     cursor: pointer;
     
 }
@@ -73,7 +73,7 @@
 
 .mov-titulo{
     border-radius: 5px 5px 0px 0px;
-    background-color:#FF6600;
+    background-color:#3742fa;
     height: auto;
 }
 .mov-titulo p{
@@ -106,7 +106,7 @@ input[type=date] {
     
 }
 input[type=date]:focus {
-    border-bottom: 2px solid #FF6600;
+    border-bottom: 2px solid #3742fa;
   }
 
 select{
@@ -118,7 +118,7 @@ select{
     box-shadow: none !important;
 }
 select:focus{
-    border-bottom: 2px solid #FF6600;
+    border-bottom: 2px solid #3742fa;
 }
 
 .fechadesde{
@@ -135,13 +135,13 @@ select:focus{
 .btnBuscar{
     margin-left: 1.5rem;
     font-size: 3vh !important;
-    background-color: #FF6600 !important;
+    background-color: #3742fa !important;
     box-shadow: none !important;
-    border-color: #EB5600 !important;
+    border-color: #3742fa !important;
 }
 .btnBuscar:hover{
     font-size: 3vh !important;
-    background-color: #EB5600 !important;
+    background-color: #3742fa !important;
 
 }
 

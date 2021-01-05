@@ -4,43 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
-    <div class=" row contenedor">
-       <div class="col-12 col-sm-12 col-md-12 col-lg-12" >
-           
-            <div class="navvar">
+<header>
+    <div class="navvar">
 
-                <div class="row" style="height: 100%;">
-                    <div class="col-1 col-sm-1 col-md-5 col-lg-6" >
-                        <div id="navegacion">
-                             <p>Bienvenido</p> 
-                        </div>
-                    </div>
-                    <div class="col-7 col-sm-7 col-md-4 col-lg-4" >
-                           
-                                <div id="nombreUsuario">
-                                    <div id="nombre">
-                                    <p>{{nombreUsuario}}</p>
-                                    </div>
-                                </div>
-                                                     
-                                <div id="fotoUsuario">
-                                    <img  id="img-usuario" [src]="fotoUsuario" alt="">
-                                </div>
-                            
-                      
-                    </div>
+        <div class="row" style="height: 100%;">
+            <div class="col-1 col-sm-1 col-md-5 col-lg-6" >
+                <div class="center">
+                     <h1>Bienvenido</h1> 
                 </div>
             </div>
-        </div>
-
-        <div class="col-12 col-sm-9 col-md-10 ">
-            <div class="componentes">
-                <router-outlet></router-outlet>
+            <div class="col-7 col-sm-7 col-md-4 col-lg-4" >
+                   
+                        <div id="nombreUsuario">
+                            <div id="nombre">
+                            <p>{{nombreUsuario}}</p>
+                            </div>
+                        </div>
+                                             
+                        <div id="fotoUsuario">
+                            <img  id="img-usuario" [src]="fotoUsuario" alt="">
+                        </div>
             </div>
         </div>
     </div>
+</header>
+<body>
+    <div class="fondo">
+        <div class="container fluid">
+                <div class="contenedor-general">
+                    <div class="row">
+                        <div class="cuerpo-cuenta1-pesos col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                            <div class="contenedor-cuentas col-12 col-sm-12 col-md-12">
+                                        
+                                <div class=" row cuentas">
+                                    <a  class="contenedor-link" routerLink = "../cuentas/detalle-cuenta">
+                                            <div class=" contenedor-ca col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                            <div class="icono-cuenta">
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                            <div class="tipocuenta">
+                                                <p>Caja Ahorro   </p>
+                                            </div>
+                                        </div>
+    
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                            <div class="saldo">
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                            <div class="nrocuenta">
+                                                <p>CBU N°: 0002235684235677895413</p>
+                                                <p>Alias</p>
 
+                                            </div>
+                                        </div>
+                                </a>
+                            
+                                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="cuerpo-cuenta2-pesos col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                        <div class="contenedor-cuentas col-12 col-sm-12 col-md-12">
+                                    
+                        </div>
+                    </div>
+    
+                    <div class="cuerpo-cuentas-dolares col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                        <div class="contenedor-cuentas col-12 col-sm-12 col-md-12">
+                                    
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+    
+    
+        </div>
+    </div>
 </body>
 </html>
 
