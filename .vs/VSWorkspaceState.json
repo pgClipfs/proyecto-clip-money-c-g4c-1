@@ -1,14 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Angular",
-    "\\Angular\\src",
     "\\Angular\\src\\app",
-    "\\Clip_Banco",
-    "\\Clip_Banco\\App_Start",
-    "\\Clip_Banco\\Controllers",
-    "\\Clip_Banco\\Models"
+    "\\Clip_Banco"
   ],
-  "SelectedNode": "\\Clip_Banco\\App_Start\\BundleConfig.cs",
+  "SelectedNode": "\\Clip_Banco\\Clip_Banco.sln",
   "PreviewInSolutionExplorer": false
 }
