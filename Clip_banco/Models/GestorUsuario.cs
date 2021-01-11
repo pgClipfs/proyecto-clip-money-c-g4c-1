@@ -44,7 +44,7 @@ namespace Clip_banco.Models
         public Usuario ObtenerUsuario(string id)
         {
             Usuario p = null;
-            string StrConn = "Server=DESKTOP-U1Q7F01\\SQLEXPRESS; Database=Wallet_Virtual; Trusted_Connection=True;";
+            string StrConn = "Server=DESKTOP-U1Q7F01\\SQLEXPRESS; Database=MonederoVirtual; Trusted_Connection=True;";
 
             using (SqlConnection conn = new SqlConnection(StrConn))
             {

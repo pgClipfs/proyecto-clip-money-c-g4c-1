@@ -7,24 +7,24 @@ namespace Clip_banco.Models
 {
     public class CajaMonedaLocal
     {
-        private int idCajaMonedaLocal;
+        private int idMonedaLocal;
         private int monto;
-        private int movimiento;
-        private string detalle;
+        private int idIngresos;
+        private int idEgresos;
         public CajaMonedaLocal()
         {
 
         }
-        public CajaMonedaLocal(int idCajaMonedaLocal, int monto, int movimiento, string detalle)
+        public CajaMonedaLocal(int idMonedaLocal, int monto, int ingresos, int egresos)
         {
-            this.idCajaMonedaLocal = idCajaMonedaLocal;
+            this.idMonedaLocal = idMonedaLocal;
             this.monto = monto;
-            this.movimiento = movimiento;
-            this.detalle = detalle;
+            this.idIngresos = ingresos;
+            this.idEgresos = egresos;
         }
-        public int IdCajaMonedaLocal { get => idCajaMonedaLocal; set => idCajaMonedaLocal = value; }
+        public int IdCajaMonedaLocal { get => idMonedaLocal; set => idMonedaLocal = value; }
         public int Monto { get => monto; set => monto = value; }
-        public int Movimiento { get => movimiento; set => movimiento = value; }
-        public string Detalle { get => detalle; set => detalle = value; }
+        public int Ingresos { get => idIngresos; set => idIngresos = value; }
+        public int Egresos { get => idIngresos; set => idEgresos = value; }
     }
 }
