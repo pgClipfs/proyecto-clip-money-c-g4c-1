@@ -28,7 +28,7 @@ namespace Clip_banco.Controllers
         }
         [HttpGet]
         [Route("authenticate")]
-        public IHttpActionResult Authenticate(LoginRequest login)
+        public IHttpActionResult Authenticate(Usuario login)
         {
             if (login == null)
                 throw new HttpRequestException(HttpStatusCode.BadRequest.ToString());
@@ -39,8 +39,10 @@ namespace Clip_banco.Controllers
 
             if (isCredentialValid)
             {
-                var token = TokenGenerator.GenerateTokenJwt(login.Username);
-                return Ok(token);
+                var token = TokenGenerator.GenerateTokenJwt(login.IdUsuario);
+                login = gLogin.ObtenerUsuario(login.IdUsuario);
+                login.Token = token;
+                return Ok(login);
             }
             else
             {

@@ -16,12 +16,18 @@ namespace Clip_banco.Models
         private int telefono;
         private string direccion;
         private int numeracion;
+        private string token;
 
         public Usuario()
         {
 
         }
-        public Usuario(string idUsuario, int DNI, string nombre, string apellido, string contrasena, string correoElectronico, int telefono, string direccion, int numeracion)
+        public Usuario(string idUsuario, string token)
+        {
+            this.idUsuario = idUsuario;
+            this.token = token;
+        }
+        public Usuario(string idUsuario, int DNI, string nombre, string apellido, string contrasena, int telefono, string correoElectronico, string direccion, int numeracion)
         {
             this.idUsuario = idUsuario;
             this.DNI = DNI;
@@ -42,5 +48,6 @@ namespace Clip_banco.Models
         public int Telefono { get => telefono; set => telefono = value; }
         public string Direccion { get => direccion; set => direccion = value; }
         public int Numeracion { get => numeracion; set => numeracion = value; }
+        public string Token { get => token; set => token = value; }
     }
 }

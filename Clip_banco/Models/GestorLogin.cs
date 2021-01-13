@@ -8,9 +8,9 @@ namespace Clip_banco.Models
 {
     public class GestorLogin
     {
-        public bool ValidarLogin(LoginRequest ploginRequest)
+        public bool ValidarLogin(Usuario loginRequest)
         {
-            string strConn = "Server=DESKTOP-U1Q7F01\\SQLEXPRESS; Database=MonederoVirtual; Trusted_Connection=True;";
+            string strConn = "Data Source=DESKTOP-TC83RVK\\SQLEXPRESS; Initial Catalog=MonederoVirtual; Integrated Security=True;";
             bool result = false;
 
             using (SqlConnection conn = new SqlConnection(strConn))
@@ -19,8 +19,8 @@ namespace Clip_banco.Models
 
                 SqlCommand comm = new SqlCommand("obtener_login", conn);
                 comm.CommandType = System.Data.CommandType.StoredProcedure;
-                comm.Parameters.Add(new SqlParameter("@username", ploginRequest.Username));
-                comm.Parameters.Add(new SqlParameter("@password", ploginRequest.Password));
+                comm.Parameters.Add(new SqlParameter("@username", loginRequest.IdUsuario));
+                comm.Parameters.Add(new SqlParameter("@password", loginRequest.Contrasena));
 
                 SqlDataReader reader = comm.ExecuteReader();
 
@@ -32,6 +32,38 @@ namespace Clip_banco.Models
             }
             return result;
 
+        }
+        public Usuario ObtenerUsuario(string id)
+        {
+            Usuario p = null;
+            string StrConn = "Data Source=DESKTOP-TC83RVK\\SQLEXPRESS; Initial Catalog=MonederoVirtual; Integrated Security=True;";
+
+            using (SqlConnection conn = new SqlConnection(StrConn))
+            {
+                conn.Open();
+
+                SqlCommand comm = new SqlCommand("obtener_login", conn);
+                comm.CommandType = System.Data.CommandType.StoredProcedure;
+                comm.Parameters.Add(new SqlParameter("@idUsuario", id));
+
+                SqlDataReader dr = comm.ExecuteReader();
+                if (dr.Read())
+                {
+                    int dni = dr.GetInt32(1);
+                    string nombre = dr.GetString(2);
+                    string apellido = dr.GetString(3);
+                    string contrasena = dr.GetString(4);
+                    string correoElectronico = dr.GetString(5);
+                    string direccion = dr.GetString(6);
+                    int numeracion = dr.GetInt32(7);
+                    int telefono = dr.GetInt32(6);
+                    p = new Usuario(id, dni, nombre, apellido, contrasena, telefono, correoElectronico, direccion, numeracion);
+                }
+
+                dr.Close();
+            }
+
+            return p;
         }
     }
 }

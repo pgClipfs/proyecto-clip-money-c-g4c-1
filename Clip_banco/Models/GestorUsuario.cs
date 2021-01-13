@@ -11,7 +11,8 @@ namespace Clip_banco.Models
     {
         public void AgregarUsuario(Usuario usuario)
         {
-            string StrConn = "Server=DESKTOP-U1Q7F01\\SQLEXPRESS; Database=Wallet_Virtual; Trusted_Connection=True;";
+            string StrConn = "Data Source=DESKTOP-TC83RVK\\SQLEXPRESS; Initial Catalog=MonederoVirtual; Integrated Security=True;";
+
 
             using (SqlConnection conn = new SqlConnection(StrConn))
             {
@@ -28,7 +29,8 @@ namespace Clip_banco.Models
         }
         public void EliminarUsuario(string id)
         {
-            string StrConn = "Server=DESKTOP-U1Q7F01\\SQLEXPRESS; Database=Wallet_Virtual; Trusted_Connection=True;";
+            string StrConn = "Data Source=DESKTOP-TC83RVK\\SQLEXPRESS; Initial Catalog=MonederoVirtual; Integrated Security=True;";
+
 
             using (SqlConnection conn = new SqlConnection(StrConn))
             {
@@ -44,7 +46,7 @@ namespace Clip_banco.Models
         public Usuario ObtenerUsuario(string id)
         {
             Usuario p = null;
-            string StrConn = "Server=DESKTOP-U1Q7F01\\SQLEXPRESS; Database=MonederoVirtual; Trusted_Connection=True;";
+            string StrConn = "Data Source=DESKTOP-TC83RVK\\SQLEXPRESS; Initial Catalog=MonederoVirtual; Integrated Security=True;";
 
             using (SqlConnection conn = new SqlConnection(StrConn))
             {
@@ -61,11 +63,11 @@ namespace Clip_banco.Models
                     string nombre = dr.GetString(2);
                     string apellido = dr.GetString(3);
                     string contrasena = dr.GetString(4);
-                    string correoElectronico = dr.GetString(5);
-                    int telefono = dr.GetInt32(6);
-                    DateTime fechaRegistro = dr.GetDateTime(7);
-                    bool status = dr.GetBoolean(8);
-                    p = new Usuario(id, dni, nombre, apellido, contrasena, correoElectronico, telefono, fechaRegistro, status);
+                    int telefono = dr.GetInt32(5);
+                    string correoElectronico = dr.GetString(6);
+                    string direccion = dr.GetString(7);
+                    int numeracion = dr.GetInt32(8);
+                    p = new Usuario(id, dni, nombre, apellido, contrasena, telefono, correoElectronico, direccion, numeracion);
                 }
 
                 dr.Close();
