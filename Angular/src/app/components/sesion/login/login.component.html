@@ -1,9 +1,9 @@
 <body  >
-    <form class="form-box animated fadeInUp" style="width: 500px; height: auto;">
+    <form class="form-box animated fadeInUp" style="width: 500px; height: auto;"[formGroup]="formGroup" (ngSubmit)="onSubmit()">
         <h1 class="form-title">Inciar Sesion</h1>
         <input type="text" placeholder="Usuario" autofocus>
         <input type="password" placeholder="Clave">
-        <button type="submit" routerLink="/home">
+        <button type="submit" routerLink="">
             Login
         </button>
         <a type="submit" routerLink="/register">Registrate</a>
