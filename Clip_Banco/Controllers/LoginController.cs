@@ -6,19 +6,23 @@ using System.Net;
 using System.Net.Http;
 using System.Threading;
 using System.Web.Http;
+using System.Web.Http.Cors;
+
 
 namespace Clip_banco.Controllers
 {
     [AllowAnonymous]
-    [RoutePrefix("api/Login")]
+    [RoutePrefix("api/login")]
     public class LoginController : ApiController
     {
+        //Data Source=.\SQLExpress2019;Initial Catalog=ClipMoney2;Persist Security Info=True;User ID=ClipMoney;Password=proyectoclip
         [HttpGet]
         [Route("echoping")]
         public IHttpActionResult EchoPing()
         {
             return Ok(true);
         }
+
         [HttpGet]
         [Route("echouser")]
         public IHttpActionResult EchoUser()
@@ -26,12 +30,15 @@ namespace Clip_banco.Controllers
             var identity = Thread.CurrentPrincipal.Identity;
             return Ok($" IPrincipal-user: {identity.Name} - IsAuthenticated: {identity.IsAuthenticated}");
         }
-        [HttpGet]
+
+        [HttpPost]
         [Route("authenticate")]
+        [EnableCors(origins: "*", headers: "*", methods: "*")]
+
         public IHttpActionResult Authenticate(LoginRequest login)
         {
             if (login == null)
-                throw new HttpRequestException(HttpStatusCode.BadRequest.ToString());
+                throw new HttpResponseException(HttpStatusCode.BadRequest);
 
             GestorLogin gLogin = new GestorLogin();
 

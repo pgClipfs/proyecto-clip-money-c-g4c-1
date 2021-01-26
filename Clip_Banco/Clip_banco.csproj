@@ -154,15 +154,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Amigos.cs" />
+    <Compile Include="Models\CajaCryptoMoneda.cs" />
+    <Compile Include="Models\CajaMonedaExtranjera.cs" />
     <Compile Include="Models\CajaMonedaLocal.cs" />
-    <Compile Include="Models\Cuenta.cs" />
-    <Compile Include="Models\Historial.cs" />
-    <Compile Include="Models\Ingresos.cs" />
-    <Compile Include="Models\Egresos.cs" />
+    <Compile Include="Models\CVU.cs" />
+    <Compile Include="Models\Factura.cs" />
     <Compile Include="Models\GestorLogin.cs" />
     <Compile Include="Models\GestorUsuario.cs" />
+    <Compile Include="Models\Inversiones.cs" />
     <Compile Include="Models\LoginRequest.cs" />
+    <Compile Include="Models\Operaciones.cs" />
+    <Compile Include="Models\Servicios.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -200,7 +202,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>57780</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44342/</IISUrl>
+          <IISUrl>http://localhost:44386/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

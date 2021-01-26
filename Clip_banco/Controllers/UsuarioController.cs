@@ -10,34 +10,39 @@ using System.Web.Http.Cors;
 
 namespace Clip_banco.Controllers
 {
-    public class UsuarioController : ApiController
+    [RoutePrefix("api/register")]
+    public class UserController : ApiController
     {
-        //[Authorize]
-        // GET: api/Persona
 
         [EnableCors(origins: "*", headers: "*", methods: "*")]
-        public Usuario Get(string id)
+        public IEnumerable<Usuario> Get()
         {
-            GestorUsuario gUsuario = new GestorUsuario();
-            return gUsuario.ObtenerUsuario(id);
+            List<Usuario> lista = new List<Usuario>();
+            return lista;
         }
 
-        // POST: api/Persona
+        [HttpPost]
+        [Route("newUser")]
         [EnableCors(origins: "*", headers: "*", methods: "*")]
-        public Usuario Post(Usuario usuario)
+        public Usuario PostNuevo(Usuario usuario)
         {
+            int id;
             GestorUsuario gUsuario = new GestorUsuario();
-            gUsuario.AgregarUsuario(usuario);
+            id = gUsuario.AgregarUsuario(usuario);
+            usuario.Id = id;
             return usuario;
         }
 
-        // DELETE: api/Persona/5
+        [HttpPost]
+        [Route("modifyUser")]
         [EnableCors(origins: "*", headers: "*", methods: "*")]
-        public void Delete(string id)
+        public Usuario PostModificado(Usuario usuariomodifcado)
         {
-            GestorUsuario gUsuario = new GestorUsuario();
-            gUsuario.EliminarUsuario(id);
-
+            int idAuto;
+            GestorUsuario mUsuario = new GestorUsuario();
+            idAuto = mUsuario.ObtenerUsuario(usuariomodifcado);
+            return usuariomodifcado;
         }
+
     }
 }

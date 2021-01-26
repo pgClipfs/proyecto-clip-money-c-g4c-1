@@ -1,31 +1,43 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Login } from '../models/login.model';
-import { TokenStorageService } from './token-storage.service';
-
-const AUTH_API = 'https://localhost:44386/api/login/';
-
-const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-};
+import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpErrorResponse } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class AuthInterceptorService implements HttpInterceptor {
 
-  constructor(private http: HttpClient,private tokenStorage:TokenStorageService) { }
+  constructor(
+    private router: Router
+  ) {}
 
-  public login(usuario:Login) : Observable<any>{
-    return this.http.post(AUTH_API + 'authenticate',usuario, httpOptions);
-  }
+  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+  
+    const token: string = localStorage.getItem('token');
 
-  public estaAutenticado() : boolean{
-    if (this.tokenStorage.getToken() != null && this.tokenStorage.getUser() != null ){
-      return true;
-    }else{
-      return false;
+    let request = req;
+
+    if (token) {
+      request = req.clone({
+        setHeaders: {
+          authorization: `Bearer ${ token }`
+        }
+      });
     }
+
+    return next.handle(request).pipe(
+      catchError((err: HttpErrorResponse) => {
+
+        if (err.status === 401) {
+         // this.router.navigateByUrl('/login');
+        }
+
+        return throwError( err );
+
+      })
+    );
+  
   }
 }
