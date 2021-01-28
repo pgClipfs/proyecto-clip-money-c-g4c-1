@@ -25,6 +25,8 @@ export class DetalleCuentaComponent implements OnInit {
   nombre:string;
   apellido: string;
   dni:string;
+  email:string;
+  Emailedit: string;
   
 
   constructor(private cuentasService: CuentasService,private router: Router,private clienteService: ClienteService) { }
@@ -41,6 +43,7 @@ export class DetalleCuentaComponent implements OnInit {
         this.tipoCuenta = this.cuentaDetallada['IdTipoCuenta'];
         this.nombreTipoCuenta = this.tipoCuenta['Nombre'];
         this.idEstado = this.cuentaDetallada['IdEstado'];
+        this.email = this.cuentaDetallada['Email']
         console.log('la cuentadetallada trae: ', this.cuentaDetallada)
 
         if(this.idEstado == 1){
@@ -72,8 +75,6 @@ export class DetalleCuentaComponent implements OnInit {
        
       }
     );
-    
-    
     
 
   }

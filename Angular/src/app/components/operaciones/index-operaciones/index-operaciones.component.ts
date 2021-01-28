@@ -19,7 +19,7 @@ export class IndexOperacionesComponent implements OnInit {
   isOperationFailed = false;
   isOperationOK = false;
   mensaje = "";
-
+  saldo: number;
   constructor(private cuentasService: CuentasService,private operacionesService:OperacionesService) { }
 
   ngOnInit(): void {
@@ -108,6 +108,16 @@ export class IndexOperacionesComponent implements OnInit {
   resetCamposDeposito() : void {
     this.obtenerCuentasDeCliente();
     this.form.monto = "";
+  }
+
+  giroDescubierto(){
+    let extraccion = new Extraccion();
+    let porcentaje = this.saldo * 0.10 ;
+    let giro = porcentaje + this.saldo;
+     if(giro <=  this.form.monto) 
+     
+        this.extraer()
+
   }
 
 }

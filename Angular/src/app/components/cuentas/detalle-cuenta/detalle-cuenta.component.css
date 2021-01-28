@@ -393,9 +393,7 @@
         padding-right: 1rem;
     }
 
-   .masopciones{
-       display: none;
-   }
+ 
    .resumen{
     display: none;
    }
@@ -420,9 +418,7 @@
         font-weight: 500;
         padding-top: 2vh !important;
     }
-    .masopciones{
-        display: none;
-    }
+
     .resumen{
      display: none;
     }

@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -46,6 +47,8 @@ form = this.fb.group({
   constructor(private clienteService: ClienteService, private dniService: DniService, private cuentasService: CuentasService, private opServices: OperacionesService, private tokenStorage: TokenStorageService, private fb: FormBuilder, private router: Router) { }
 
   ngOnInit(): void {
+
+
     var idUser = this.tokenStorage.getIdClient();
     this.fotosDni.id = idUser
 
@@ -114,7 +117,6 @@ form = this.fb.group({
     
   }
 
-
   onSubmit(){
     this.fotosDni.selfieCliente = this.selfie
     this.fotosDni.fotoFrenteDni = this.frenteDni;
@@ -125,7 +127,7 @@ form = this.fb.group({
       data => {
         if (data){
           swal.fire('Has verificado tu identidad', 'Tu cuenta ha sido activada con exito', 'success');
-          this.router.navigate(['/home/inicio']);
+          this.router.navigate(['../../home']);
         }else{
           swal.fire('Ups', 'Fallo en la verificacion de tu identidad', 'error');
         }
@@ -136,9 +138,9 @@ form = this.fb.group({
   }
 
   //Metodo previsualizar fotos en el inicio
-  frenteDni = "./assets/images/SubirFoto.png"
-  dorsoDni = "./assets/images/SubirFoto.png"
-  selfie = "./assets/images/SubirFoto.png"
+  frenteDni = ""
+  dorsoDni = ""
+  selfie = ""
   onSelectFile(event, type ): void{
 
     if(this.validar(type))

@@ -19,16 +19,15 @@
                     <h6 class=" texto-ingreso card-header">Ingreso de dinero a mi cuenta</h6>
                     <div class="card-body">
                         <form  style="margin-inline: 25%;" (ngSubmit)="depositar()">
-                            <div class="form-group">
-                                <label for="cuenta_virtual">Seleccione la cuenta a la que va a depositar</label>
-                                <select class="form-control"  name="cuenta">
-                                    <option *ngFor="let cuenta of cuentasDelCliente" ></option>
-                                </select>
-                            </div>
                             
+                            <div class="contenedor-operaciones col">
+                                <label for="monto">Saldo de la cuenta</label>
+                                <h1><strong>{{saldo}}</strong></h1>
+                            </div>
+
                             <div class="form-group">
-                                <label for="monto">Ingrese el monto que desea depositar:</label>
-                                <input type="number" class="form-control" name="monto"   required autocomplete="off">
+                                <label for="monto">Ingrese el monto que desea ingresar:</label>
+                                <input  [(ngModel)]="ingreso"  class="form-control" name="monto"  required autocomplete="off">
                             </div>
 
                             <div class="form-group">
@@ -48,7 +47,7 @@
                             </div>
 
                             <div class="form-group" style="text-align: right;margin-top: 30px;">
-                                <button type="submit" class="btn btn-outline-success btn-block"><i class="fas fa-check"></i> Confirmar</button>
+                                <button type="submit" class="btn btn-outline-success btn-block" (click)="ingresar"><i class="fas fa-check"></i> Confirmar</button>
                             </div>
                         </form>
                     </div>
@@ -60,13 +59,12 @@
 
                     <div class="card-body">
                         <form  style="margin-inline: 25%;" (ngSubmit)="extraer()">
-                            <div class="form-group">
-                                <label for="cuenta_virtual">Seleccione la cuenta a la que va a extraer dinero:</label>
-                                <select class="form-control"  name="cuenta">
-                                    <option *ngFor="let cuenta of cuentasDelCliente"></option>
-                                </select>
-                            </div>
                             
+                            <div class="contenedor-operaciones col">
+                                <label for="monto">Saldo de la cuenta</label>
+                                <h1><strong>{{saldo}}</strong></h1>
+                            </div>
+
                             <div class="form-group">
                                 <label for="monto">Ingrese el monto que desea extraer:</label>
                                 <input type="number" class="form-control" name="monto"   required autocomplete="off">

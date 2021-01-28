@@ -1,26 +1,22 @@
-<link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-
-<div class="barra-direcciones">
-    <div class="inicio"><a class="inicio-a" routerLink ="/home/inicio">Inicio <i class="fas fa-angle-right"></i></a></div>
-    <div class="cuentas"><a class="cuentas-a" routerLink ="/home/cuentas">Cuentas <i class="fas fa-angle-right"></i></a></div>
-    <div class="nrocuenta"><p class="nrocuenta-a"> CA $ {{nrocuenta}}</p></div>
-</div>
-<div class="contenedor-botones">
-    <div class="masopciones"><button class=" btn-masopciones btn btn-primary">Mas Opciones <i class="fas fa-angle-down"></i></button></div>
-    <div class="resumen"><button class="btn-resumen btn btn-primary">Ultimo Resumen <i class="far fa-file-alt"></i> </button></div>
-    <div class="movimientos"><button class="btn-movimientos btn btn-primary" routerLink= "../detalle-cuenta/movimientos">Movimientos Historicos <i class="fas fa-list"></i></button></div>
-</div>
 <div class=" contenedor-general container-fluid">
     <div class="row">
+        <div class="contenedor-botones">
+            <div class="masopciones"><button class=" btn-masopciones btn btn-primary" routerLink="../detalle-cuenta/miperfil" >Mas Opciones  <i class="fas fa-list"></i></button></div>
+            <div class="movimientos"><button class="btn-movimientos btn btn-primary" routerLink= "../detalle-cuenta/movimientos">Movimientos Historicos <i class="fas fa-list"></i></button></div>
+
+        </div>
         <div class="titulo-cuenta col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-            <p>CA $ {{nrocuenta}}</p>
+            <p>CA 000001</p>
+            <noscript>cuando este la conexion cambiar pvalor a: {{nrocuenta}}</noscript>
+
         </div>
         <div class=" contenido-cuenta col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
             <div class="row">
                 <div class="contenido-saldo col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
                     <div class="contenido-saldo-centrado">
                         <p id="texto-saldo">Saldo Disponible</p>
-                        <p id="texto-plata">$ {{saldo}}</p>
+                        <p id="texto-plata">$ 40000</p>
+                        <noscript>cuando este la conexion cambiar pvalor a: {{saldo}}</noscript>
                     </div> 
                 </div>
 
@@ -33,14 +29,18 @@
                                         <div class="nombre-apellido col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                                             <div class="row">
                                                 <div class="texto-nomape col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12"><p class="ptexto">Nombre y Apellido</p></div>
-                                                <div class="valor-nomape col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12"><p class="pvalor">{{nombre}} {{apellido}}</p></div>
+                                                <div class="valor-nomape col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12"><p class="pvalor">Lucas Vercellone</p></div>
+                                                <noscript>cuando este la conexion cambiar pvalor a: {{nombre}}{{apellido}}</noscript>
+
                                             </div>
                                         </div>
 
                                         <div class="dni col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                                             <div class="row">
                                                 <div class="texto-dni col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12"><p class="ptexto">Dni</p></div>
-                                                <div class="valor-dni col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12"><p class="pvalor">{{dni}}</p></div>
+                                                <div class="valor-dni col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12"><p class="pvalor">40523432</p></div>
+                                                <noscript>cuando este la conexion cambiar pvalor a: {{dni}}</noscript>
+
                                             </div>
                                         </div>
                                     </div>
@@ -50,15 +50,16 @@
                                     <div class="row">
                                         <div class="caja-ahorro col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                                             <div class="row">
-                                                <div class="texto-cajaahorro col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12"><p class="ptexto">Caja de ahorro</p></div>
-                                                <div class="valor-cajaahorro col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12"><p class="pvalor">{{nombreTipoCuenta}} {{nrocuenta}}</p></div>
+                                                <div class="texto-cajaahorro col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12"><p class="ptexto">Email</p></div>
+                                                <div class="valor-cajaahorro col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12"><p class="pvalor" > {{email}} </p></div>
                                             </div>
                                         </div>
 
                                         <div class="cvu col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                                             <div class="row">
                                                 <div class="texto-cvu col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12"><p class="ptexto">Nro CVU</p></div>
-                                                <div class="valor-cvu col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12"><p class="pvalor">{{cvu}}</p></div>
+                                                <div class="valor-cvu col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12"><p class="pvalor">002564224452210 </p></div>
+                                                <noscript>cuando este la conexion cambiar pvalor a: {{cvu}}</noscript>
                                             </div>
                                         </div>
                                     </div>
@@ -79,7 +80,9 @@
                                         <div class="alias col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                                             <div class="row">
                                                 <div class="texto-alias col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12"><p class="ptexto">Alias</p></div>
-                                                <div class="valor-alias col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12"><p class="pvalor">{{alias}}</p></div>
+                                                <div class="valor-alias col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12"><p class="pvalor">Lucas.banco.clip</p></div>
+                                                <noscript>cuando este la conexion cambiar pvalor a: {{alias}}</noscript>
+
                                             </div>
                                         </div>
                                     </div>
@@ -91,7 +94,9 @@
                                         <div class="estado col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                                             <div class="row">
                                                 <div class="texto-estado col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12"><p class="ptexto">Estado</p></div>
-                                                <div class="valor-estado col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12"><p class="pvalor">Cuenta {{estado}} </p></div>
+                                                <div class="valor-estado col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12"><p class="pvalor">Cuenta Inactiva </p></div>
+                                                <noscript>cuando este la conexion cambiar pvalor a: {{estado}}</noscript>
+
                                             </div>
                                         </div>
 
