@@ -1,0 +1,64 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+div {
+    background-color: #C5CFD5;
+    height: 43rem;
+    width: 450px;
+    border-radius: 20px;
+    background-color: #f2f2f2;
+    padding: 50px;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+h2 {
+    color: #31458A;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 22px;
+    align-items: center;
+}
+
+.BotonEnviar {
+    background-color: #31458A;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: verdana;
+    font-size: 15px;
+}
+
+.botoncuentas {
+    border: none;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: rgb(41, 28, 97)
+}
